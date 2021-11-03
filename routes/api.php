@@ -17,4 +17,8 @@ use App\Http\Controllers\API\CovidAPIController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/covid',[CovidAPIController::class,'index']);
+
+
+Route::post('login',[CovidAPIController::class,'login']);
+Route::post('register',[CovidAPIController::class,'register']);
+Route::post('reset-password',[CovidAPIController::class,'resetPassword']);

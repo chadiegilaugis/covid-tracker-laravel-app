@@ -27,3 +27,5 @@ Route::get('/home', [
 
 
 Route::resource('covidAPIs', App\Http\Controllers\CovidAPIController::class);
+
+Route::resource('logs', App\Http\Controllers\LogsController::class);
