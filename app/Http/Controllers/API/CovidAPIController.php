@@ -48,8 +48,8 @@ class CovidAPIController extends Controller
 
             $logs->userid = $user->id;
             $logs->log = "Login";
-            $logs['logdetails'] = "User $user->username has logged in into my system";
-            $logs['logtype'] = "API login";
+            $logs->logdetails = "User $user->username has logged in into my system";
+            $logs->logtype = "API login";
             $logs->save();
 
             return response()->json($success,200);

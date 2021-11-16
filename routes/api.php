@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\CovidAPIController;
+use App\Http\Controllers\API\CovidPostController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,3 +23,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('login',[CovidAPIController::class,'login']);
 Route::post('register',[CovidAPIController::class,'register']);
 Route::post('reset-password',[CovidAPIController::class,'resetPassword']);
+
+
+// POSTs
+
+Route::get('get-all-posts',[CovidPostController::class,'getAllPosts']);
+Route::get('get-post',[CovidPostController::class,'getPost']);
+Route::get('search-post',[CovidPostController::class,'searchPost']);
